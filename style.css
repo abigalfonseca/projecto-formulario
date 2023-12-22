@@ -1,22 +1,95 @@
 @charset "UTF-8";
 
-@font-face {
-    font-family: 'barlow';
-    src: url(/Barlow-Regular.ttf);
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'barlow', 'sans serif';
 }
 
-body {
+body{
     width: 100%;
     height: 100vh;
-    background-image: url(/fundo.jpg);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(images/fundo.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+form{
+    background-color: #fff;
+    max-width: 500px;
+    height: 450px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 7px 7px 2px rgba(0, 0, 0, 0.425);
+
+}
+
+form h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #02223A;
+}
+
+form p {
+    color: rgba(0, 0, 0, 0.596);
+    text-align: center;
+    font-size: 15px;
+    margin: 30px 0;
+}
+
+.input-simples{
+    position: relative;
+    margin: 30px 0;
+}
+
+.input-simples label{
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all 0.3s;
+    cursor: text;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.877);
+}
+
+.input{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #cccc;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+form .input-simples .input:focus ~ label,
+form .input-simples .input:valid ~ label{
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: #02223A;
+}
+
+.btn-enviar{
+    width: 100%;
+    text-align: center;
+}
+
+form input[type=submit]{
+    padding: 10px 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #02223A;
+    color: #fff;
+    cursor: pointer;
 }
