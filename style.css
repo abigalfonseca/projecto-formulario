@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'barlow';
+    src: url(/Barlow-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'barlow', 'sans serif';
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/fundo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
